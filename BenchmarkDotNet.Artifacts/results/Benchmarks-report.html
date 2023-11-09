@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>Benchmarks-20231109-205550</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet v0.13.9+228a464e8be6c580ad9408e98f18813f6407fb5a, Windows 10 (10.0.19045.3570/22H2/2022Update)
+AMD Ryzen 7 1800X, 1 CPU, 16 logical and 8 physical cores
+.NET SDK 7.0.402
+  [Host]     : .NET 7.0.12 (7.0.1223.47720), X64 RyuJIT AVX2
+  DefaultJob : .NET 7.0.12 (7.0.1223.47720), X64 RyuJIT AVX2
+</code></pre>
+<pre><code></code></pre>
+
+<table>
+<thead><tr><th>Method</th><th>Mean</th><th>Error</th><th>StdDev</th><th>Ratio</th><th>RatioSD</th>
+</tr>
+</thead><tbody><tr><td>Div1</td><td>37.87 &mu;s</td><td>0.152 &mu;s</td><td>0.142 &mu;s</td><td>1.00</td><td>0.00</td>
+</tr><tr><td>Div2</td><td>76.12 &mu;s</td><td>0.752 &mu;s</td><td>0.704 &mu;s</td><td>2.01</td><td>0.02</td>
+</tr><tr><td>Div3</td><td>113.58 &mu;s</td><td>0.382 &mu;s</td><td>0.357 &mu;s</td><td>3.00</td><td>0.01</td>
+</tr><tr><td>Div4</td><td>151.40 &mu;s</td><td>0.556 &mu;s</td><td>0.520 &mu;s</td><td>4.00</td><td>0.02</td>
+</tr><tr><td>Div5</td><td>189.32 &mu;s</td><td>0.527 &mu;s</td><td>0.493 &mu;s</td><td>5.00</td><td>0.02</td>
+</tr></tbody></table>
+</body>
+</html>
