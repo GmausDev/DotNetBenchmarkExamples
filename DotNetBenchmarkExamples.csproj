@@ -3,8 +3,8 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
 <!-- Recordamos añadir una maldita S para que no pete 😭😭 -->
-    <TargetFramework>net8.0</TargetFramework>
-    <!-- <TargetFrameworks>net48;netcoreapp3.1;net5.0;net6.0;net7.0;net8.0</TargetFrameworks> -->
+    <!-- <TargetFramework>net8.0</TargetFramework> -->
+    <TargetFrameworks>net48;netcoreapp3.1;net5.0;net6.0;net7.0;net8.0</TargetFrameworks>
     <!-- Comentado por que la version de cSHARP no corresponde jaja xD-->
     <!-- <ImplicitUsings>enable</ImplicitUsings> -->
     <!-- <Nullable>enable</Nullable> -->

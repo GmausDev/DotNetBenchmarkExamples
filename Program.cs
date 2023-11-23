@@ -12,12 +12,7 @@ namespace DotnetBenchamarkExamples // 📎📎📎📎.
 
 
             //Oldschool benchmarking
-            // var stopwatch1 = Stopwatch.StartNew();
-            // IsPrime(2147483647);
-            // stopwatch1.Stop();
-            // var stopwatch2 = Stopwatch.StartNew();
-            // IsPrime(2147483647);
-            // stopwatch2.Stop();
+
 
             // Console.WriteLine(stopwatch1.ElapsedMilliseconds + " vs. " +
             // stopwatch2.ElapsedMilliseconds);
@@ -29,22 +24,13 @@ namespace DotnetBenchamarkExamples // 📎📎📎📎.
 // How can it be implemented? We can introduce a “maximum acceptable error” (let’s 
 // say 20%5
 //  of the average of two measurements) and use it during comparison
-            // var error = ((stopwatch1.ElapsedMilliseconds +
-            // stopwatch2.ElapsedMilliseconds) / 2) * 0.20;
-            // if (Math.Abs(stopwatch1.ElapsedMilliseconds -
-            // stopwatch2.ElapsedMilliseconds) < error)
-            // Console.WriteLine("There is no significant difference between methods");
-            // else if (stopwatch1.ElapsedMilliseconds < stopwatch2.ElapsedMilliseconds)
-            // Console.WriteLine("The first method is faster");
-            // else
-            // Console.WriteLine("The second method is faster");
             
             
-            // Console.WriteLine("Start benchmarking🐧🐧🐧🐧🐧");
-             _= BenchmarkRunner.Run<Penguin.ArrayIterationBenchmark>();
-            // _= BenchmarkRunner.Run<Penguin.InterpolationBenchmark>();
-            // // _= BenchmarkRunner.Run<Penguin.DivBenchmark>();
-            // Console.WriteLine("Just stop📎📎📎📎📎");
+            Console.WriteLine("Start benchmarking🐧🐧🐧🐧🐧");
+            //  _= BenchmarkRunner.Run<Penguin.ArrayIterationBenchmark>();
+            _= BenchmarkRunner.Run<Penguin.InterpolationBenchmark>();
+            // _= BenchmarkRunner.Run<Penguin.DivBenchmark>();
+            Console.WriteLine("Just stop📎📎📎📎📎");
         }
         // It's not the fastest algorithm,
         // but we will optimize it later.

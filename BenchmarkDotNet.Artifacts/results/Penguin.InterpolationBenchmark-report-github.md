@@ -15,9 +15,9 @@ BenchmarkDotNet v0.13.10, Windows 11 (10.0.22621.2715/22H2/2022Update/SunValley2
 ```
 | Method        | Job                  | Runtime              | Mean     | Error    | StdDev    | Median   | Ratio        | RatioSD |
 |-------------- |--------------------- |--------------------- |---------:|---------:|----------:|---------:|-------------:|--------:|
-| Interpolation | .NET 5.0             | .NET 5.0             | 60.15 ns | 4.543 ns | 13.394 ns | 53.36 ns | 2.01x slower |   0.38x |
-| Interpolation | .NET 6.0             | .NET 6.0             | 44.52 ns | 5.773 ns | 17.022 ns | 33.65 ns | 2.02x slower |   0.19x |
-| Interpolation | .NET 7.0             | .NET 7.0             | 39.36 ns | 0.770 ns |  0.720 ns | 39.42 ns | 1.07x slower |   0.02x |
-| Interpolation | .NET 8.0             | .NET 8.0             | 36.66 ns | 0.450 ns |  0.421 ns | 36.57 ns |     baseline |         |
-| Interpolation | .NET Core 3.1        | .NET Core 3.1        | 54.72 ns | 1.141 ns |  2.028 ns | 54.30 ns | 1.48x slower |   0.07x |
-| Interpolation | .NET Framework 4.8.1 | .NET Framework 4.8.1 | 72.14 ns | 1.846 ns |  4.926 ns | 70.98 ns | 1.99x slower |   0.14x |
+| Interpolation | .NET 5.0             | .NET 5.0             | 56.81 ns | 1.417 ns |  4.020 ns | 56.10 ns | 1.28x slower |   0.07x |
+| Interpolation | .NET 6.0             | .NET 6.0             | 54.73 ns | 4.290 ns | 12.650 ns | 59.25 ns | 1.13x faster |   0.08x |
+| Interpolation | .NET 7.0             | .NET 7.0             | 49.30 ns | 1.035 ns |  0.968 ns | 48.91 ns | 1.01x slower |   0.02x |
+| Interpolation | .NET 8.0             | .NET 8.0             | 48.83 ns | 0.697 ns |  0.618 ns | 49.03 ns |     baseline |         |
+| Interpolation | .NET Core 3.1        | .NET Core 3.1        | 75.87 ns | 2.181 ns |  6.293 ns | 75.15 ns | 1.57x slower |   0.09x |
+| Interpolation | .NET Framework 4.8.1 | .NET Framework 4.8.1 | 79.67 ns | 2.248 ns |  6.302 ns | 78.91 ns | 1.75x slower |   0.14x |
