@@ -2,7 +2,7 @@
 <html lang='en'>
 <head>
 <meta charset='utf-8' />
-<title>SparksAndFrameworksBenchmark-20231122-002455</title>
+<title>SparksAndFrameworksBenchmark-20231122-193958</title>
 
 <style type="text/css">
 	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
@@ -13,10 +13,10 @@
 </head>
 <body>
 <pre><code>
-BenchmarkDotNet v0.13.10, Windows 11 (10.0.22621.2428/22H2/2022Update/SunValley2)
+BenchmarkDotNet v0.13.10, Windows 11 (10.0.22621.2715/22H2/2022Update/SunValley2)
 12th Gen Intel Core i7-1255U, 1 CPU, 12 logical and 10 physical cores
 .NET SDK 8.0.100
-  [Host]   : .NET 6.0.25 (6.0.2523.51912), X64 RyuJIT AVX2
+  [Host]   : .NET 8.0.0 (8.0.23.53103), X64 RyuJIT AVX2
   .NET 6.0 : .NET 6.0.25 (6.0.2523.51912), X64 RyuJIT AVX2
   .NET 7.0 : .NET 7.0.14 (7.0.1423.51910), X64 RyuJIT AVX2
   .NET 8.0 : .NET 8.0.0 (8.0.23.53103), X64 RyuJIT AVX2
@@ -24,11 +24,14 @@ BenchmarkDotNet v0.13.10, Windows 11 (10.0.22621.2428/22H2/2022Update/SunValley2
 <pre><code></code></pre>
 
 <table>
-<thead><tr><th>Method </th><th>Job</th><th>Runtime</th><th>Mean</th><th>Error</th><th>StdDev</th><th>Median</th><th>Ratio </th><th>RatioSD</th>
+<thead><tr><th>Method </th><th>Job           </th><th>Runtime       </th><th>Mean</th><th>Error</th><th>StdDev</th><th>Ratio </th><th>RatioSD</th>
 </tr>
-</thead><tbody><tr><td>Interpolation</td><td>.NET 6.0</td><td>.NET 6.0</td><td>48.45 ns</td><td>2.022 ns</td><td>5.899 ns</td><td>47.69 ns</td><td>baseline</td><td></td>
-</tr><tr><td>Interpolation</td><td>.NET 7.0</td><td>.NET 7.0</td><td>58.97 ns</td><td>2.172 ns</td><td>6.404 ns</td><td>60.42 ns</td><td>1.23x slower</td><td>0.16x</td>
-</tr><tr><td>Interpolation</td><td>.NET 8.0</td><td>.NET 8.0</td><td>61.47 ns</td><td>2.154 ns</td><td>6.145 ns</td><td>59.80 ns</td><td>1.29x slower</td><td>0.23x</td>
+</thead><tbody><tr><td>Interpolation</td><td>.NET 6.0</td><td>.NET 6.0</td><td>46.40 ns</td><td>0.504 ns</td><td>0.690 ns</td><td>1.09x slower</td><td>0.02x</td>
+</tr><tr><td>Interpolation</td><td>.NET 7.0</td><td>.NET 7.0</td><td>47.79 ns</td><td>0.994 ns</td><td>1.184 ns</td><td>1.12x slower</td><td>0.03x</td>
+</tr><tr><td>Interpolation</td><td>.NET 8.0</td><td>.NET 8.0</td><td>42.67 ns</td><td>0.268 ns</td><td>0.250 ns</td><td>baseline</td><td></td>
+</tr><tr><td>Interpolation</td><td>.NET Core 3.1</td><td>.NET Core 3.1</td><td>NA</td><td>NA</td><td>NA</td><td>?</td><td>?</td>
+</tr><tr><td>Interpolation</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>NA</td><td>NA</td><td>NA</td><td>?</td><td>?</td>
+</tr><tr><td>Interpolation</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>NA</td><td>NA</td><td>NA</td><td>?</td><td>?</td>
 </tr></tbody></table>
 </body>
 </html>

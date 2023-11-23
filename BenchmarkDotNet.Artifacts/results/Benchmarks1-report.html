@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>Benchmarks1-20231122-192801</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet v0.13.10, Windows 11 (10.0.22621.2715/22H2/2022Update/SunValley2)
+12th Gen Intel Core i7-1255U, 1 CPU, 12 logical and 10 physical cores
+.NET SDK 8.0.100
+  [Host]   : .NET 8.0.0 (8.0.23.53103), X64 RyuJIT AVX2
+  .NET 6.0 : .NET 6.0.25 (6.0.2523.51912), X64 RyuJIT AVX2
+  .NET 7.0 : .NET 7.0.14 (7.0.1423.51910), X64 RyuJIT AVX2
+  .NET 8.0 : .NET 8.0.0 (8.0.23.53103), X64 RyuJIT AVX2
+</code></pre>
+<pre><code></code></pre>
+
+<table>
+<thead><tr><th>Method</th><th>Job           </th><th>Runtime       </th><th>Mean</th><th>Error</th><th>StdDev</th><th>Ratio </th><th>RatioSD</th>
+</tr>
+</thead><tbody><tr><td>Div1</td><td>.NET 6.0</td><td>.NET 6.0</td><td>29.71 &mu;s</td><td>0.479 &mu;s</td><td>0.448 &mu;s</td><td>1.01x faster</td><td>0.02x</td>
+</tr><tr><td>Div2</td><td>.NET 6.0</td><td>.NET 6.0</td><td>29.83 &mu;s</td><td>0.575 &mu;s</td><td>0.615 &mu;s</td><td>1.01x faster</td><td>0.02x</td>
+</tr><tr><td>Div3</td><td>.NET 6.0</td><td>.NET 6.0</td><td>44.79 &mu;s</td><td>0.847 &mu;s</td><td>0.792 &mu;s</td><td>1.49x slower</td><td>0.02x</td>
+</tr><tr><td>Div4</td><td>.NET 6.0</td><td>.NET 6.0</td><td>60.10 &mu;s</td><td>0.729 &mu;s</td><td>0.681 &mu;s</td><td>2.00x slower</td><td>0.02x</td>
+</tr><tr><td>Div5</td><td>.NET 6.0</td><td>.NET 6.0</td><td>74.67 &mu;s</td><td>1.468 &mu;s</td><td>1.508 &mu;s</td><td>2.48x slower</td><td>0.04x</td>
+</tr><tr><td>Div1</td><td>.NET 7.0</td><td>.NET 7.0</td><td>30.24 &mu;s</td><td>0.151 &mu;s</td><td>0.134 &mu;s</td><td>1.00x slower</td><td>0.01x</td>
+</tr><tr><td>Div2</td><td>.NET 7.0</td><td>.NET 7.0</td><td>30.44 &mu;s</td><td>0.125 &mu;s</td><td>0.097 &mu;s</td><td>1.01x slower</td><td>0.01x</td>
+</tr><tr><td>Div3</td><td>.NET 7.0</td><td>.NET 7.0</td><td>45.23 &mu;s</td><td>0.879 &mu;s</td><td>1.079 &mu;s</td><td>1.50x slower</td><td>0.04x</td>
+</tr><tr><td>Div4</td><td>.NET 7.0</td><td>.NET 7.0</td><td>60.34 &mu;s</td><td>0.700 &mu;s</td><td>0.655 &mu;s</td><td>2.00x slower</td><td>0.04x</td>
+</tr><tr><td>Div5</td><td>.NET 7.0</td><td>.NET 7.0</td><td>75.90 &mu;s</td><td>1.387 &mu;s</td><td>2.199 &mu;s</td><td>2.54x slower</td><td>0.07x</td>
+</tr><tr><td>Div1</td><td>.NET 8.0</td><td>.NET 8.0</td><td>30.10 &mu;s</td><td>0.432 &mu;s</td><td>0.383 &mu;s</td><td>baseline</td><td></td>
+</tr><tr><td>Div2</td><td>.NET 8.0</td><td>.NET 8.0</td><td>30.61 &mu;s</td><td>0.261 &mu;s</td><td>0.231 &mu;s</td><td>1.02x slower</td><td>0.01x</td>
+</tr><tr><td>Div3</td><td>.NET 8.0</td><td>.NET 8.0</td><td>45.39 &mu;s</td><td>0.793 &mu;s</td><td>0.741 &mu;s</td><td>1.51x slower</td><td>0.03x</td>
+</tr><tr><td>Div4</td><td>.NET 8.0</td><td>.NET 8.0</td><td>59.58 &mu;s</td><td>0.630 &mu;s</td><td>0.590 &mu;s</td><td>1.98x slower</td><td>0.03x</td>
+</tr><tr><td>Div5</td><td>.NET 8.0</td><td>.NET 8.0</td><td>74.88 &mu;s</td><td>0.727 &mu;s</td><td>0.680 &mu;s</td><td>2.49x slower</td><td>0.03x</td>
+</tr><tr><td>Div1</td><td>.NET Core 3.1</td><td>.NET Core 3.1</td><td>NA</td><td>NA</td><td>NA</td><td>?</td><td>?</td>
+</tr><tr><td>Div2</td><td>.NET Core 3.1</td><td>.NET Core 3.1</td><td>NA</td><td>NA</td><td>NA</td><td>?</td><td>?</td>
+</tr><tr><td>Div3</td><td>.NET Core 3.1</td><td>.NET Core 3.1</td><td>NA</td><td>NA</td><td>NA</td><td>?</td><td>?</td>
+</tr><tr><td>Div4</td><td>.NET Core 3.1</td><td>.NET Core 3.1</td><td>NA</td><td>NA</td><td>NA</td><td>?</td><td>?</td>
+</tr><tr><td>Div5</td><td>.NET Core 3.1</td><td>.NET Core 3.1</td><td>NA</td><td>NA</td><td>NA</td><td>?</td><td>?</td>
+</tr><tr><td>Div1</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>NA</td><td>NA</td><td>NA</td><td>?</td><td>?</td>
+</tr><tr><td>Div2</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>NA</td><td>NA</td><td>NA</td><td>?</td><td>?</td>
+</tr><tr><td>Div3</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>NA</td><td>NA</td><td>NA</td><td>?</td><td>?</td>
+</tr><tr><td>Div4</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>NA</td><td>NA</td><td>NA</td><td>?</td><td>?</td>
+</tr><tr><td>Div5</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>NA</td><td>NA</td><td>NA</td><td>?</td><td>?</td>
+</tr><tr><td>Div1</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>NA</td><td>NA</td><td>NA</td><td>?</td><td>?</td>
+</tr><tr><td>Div2</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>NA</td><td>NA</td><td>NA</td><td>?</td><td>?</td>
+</tr><tr><td>Div3</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>NA</td><td>NA</td><td>NA</td><td>?</td><td>?</td>
+</tr><tr><td>Div4</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>NA</td><td>NA</td><td>NA</td><td>?</td><td>?</td>
+</tr><tr><td>Div5</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>NA</td><td>NA</td><td>NA</td><td>?</td><td>?</td>
+</tr></tbody></table>
+</body>
+</html>

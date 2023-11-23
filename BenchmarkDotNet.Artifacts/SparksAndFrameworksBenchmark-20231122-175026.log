@@ -1,0 +1,7 @@
+// Validating benchmarks:
+// Benchmark SparksAndFrameworksBenchmark.Interpolation: Mono(Runtime=Mono)
+//    * Mono is not installed or added to PATH, benchmark 'SparksAndFrameworksBenchmark.Interpolation: Mono(Runtime=Mono)' will not be executed
+
+// Benchmark SparksAndFrameworksBenchmark.Interpolation: Mono(Runtime=Mono)
+//    * The Roslyn toolchain is only supported on .NET Framework
+
