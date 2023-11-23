@@ -1,34 +1,37 @@
+using System;
+using System.Threading.Tasks;
+using BenchmarkDotNet.Attributes;
+using BenchmarkDotNet.Jobs;
+using BenchmarkDotNet.Running;
+using BenchmarkDotNet.Columns;
+using BenchmarkDotNet.Configs;
+using BenchmarkDotNet.Reports;
 
-
-namespace Sparkleeeesss // Note: actual namespace depends on the project name.
+namespace Penguin // 🐧🐧🐧🐧🐧
 {
-    using System;
-    using System.Threading.Tasks;
-    using BenchmarkDotNet.Attributes;
-    using BenchmarkDotNet.Jobs;
-    using BenchmarkDotNet.Running;
-    using BenchmarkDotNet.Columns;
-    using BenchmarkDotNet.Configs;
-    using BenchmarkDotNet.Reports;
+
 
     [Config(typeof(Config))]
     [RankColumn]
     [MemoryDiagnoser]
     [MarkdownExporterAttribute.Default]
     [Orderer(BenchmarkDotNet.Order.SummaryOrderPolicy.FastestToSlowest)]
-    [SimpleJob(RuntimeMoniker.NetCoreApp31,baseline:true)]
-    [SimpleJob(RuntimeMoniker.Net50)]
-    [SimpleJob(RuntimeMoniker.Net60)]
+    // [SimpleJob(RuntimeMoniker.NetCoreApp31,baseline:true)]
+    // [SimpleJob(RuntimeMoniker.Net50)]
+    // [SimpleJob(RuntimeMoniker.Net60)]
+    // [SimpleJob(RuntimeMoniker.Net70)]
     [SimpleJob(RuntimeMoniker.Net80)]
 
-    public class SparksAndFrameworksBenchmarkdue
+    public class ArrayIterationBenchmark
     {
 
-        [Params(10000)]
+        // Definimos parametros para el benchmark
+        [Params(500)]
         public int N;
 
         private string[] benchmarkArray;
 
+        // Podemos añadir una configuracion para los benchmarks
         [GlobalSetup]
         public void Setup()
         {
@@ -96,7 +99,7 @@ namespace Sparkleeeesss // Note: actual namespace depends on the project name.
                 _ = item;
             }
         }
-        
+        // Configuramos las propiedades del benchmark, estilo si queremos crear plots o lo que sea
         private class Config: ManualConfig
         {
             public Config()

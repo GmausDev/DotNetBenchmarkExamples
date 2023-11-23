@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>Penguin.ArrayIterationBenchmark-20231123-113013</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet v0.13.10, Windows 11 (10.0.22621.2715/22H2/2022Update/SunValley2)
+12th Gen Intel Core i7-1255U, 1 CPU, 12 logical and 10 physical cores
+.NET SDK 8.0.100
+  [Host]   : .NET 8.0.0 (8.0.23.53103), X64 RyuJIT AVX2
+  .NET 8.0 : .NET 8.0.0 (8.0.23.53103), X64 RyuJIT AVX2
+</code></pre>
+<pre><code>Job=.NET 8.0  Runtime=.NET 8.0  
+</code></pre>
+
+<table>
+<thead><tr><th>Method </th><th>N</th><th>Mean</th><th>Error</th><th>StdDev</th><th>Median</th><th>Rank</th><th>Gen0</th><th>Allocated</th>
+</tr>
+</thead><tbody><tr><td>ForEachLoop</td><td>500</td><td>133.8 ns</td><td>0.61 ns</td><td>0.57 ns</td><td>133.9 ns</td><td>1</td><td>-</td><td>-</td>
+</tr><tr><td>ForLoop</td><td>500</td><td>139.8 ns</td><td>1.53 ns</td><td>1.28 ns</td><td>139.6 ns</td><td>2</td><td>-</td><td>-</td>
+</tr><tr><td>ArrayForEach</td><td>500</td><td>140.2 ns</td><td>0.85 ns</td><td>0.79 ns</td><td>140.2 ns</td><td>2</td><td>-</td><td>-</td>
+</tr><tr><td>SpanForEach</td><td>500</td><td>142.1 ns</td><td>1.02 ns</td><td>0.96 ns</td><td>142.3 ns</td><td>2</td><td>-</td><td>-</td>
+</tr><tr><td>SpanFor</td><td>500</td><td>150.7 ns</td><td>2.67 ns</td><td>2.50 ns</td><td>150.7 ns</td><td>3</td><td>-</td><td>-</td>
+</tr><tr><td>GetEnumerator</td><td>500</td><td>557.2 ns</td><td>11.17 ns</td><td>28.83 ns</td><td>548.6 ns</td><td>4</td><td>0.0048</td><td>32 B</td>
+</tr></tbody></table>
+</body>
+</html>

@@ -12,14 +12,14 @@ BenchmarkDotNet v0.13.10, Windows 11 (10.0.22621.2715/22H2/2022Update/SunValley2
 ```
 | Method        | Job                  | Runtime              | Mean     | Error    | StdDev   | Ratio        | RatioSD |
 |-------------- |--------------------- |--------------------- |---------:|---------:|---------:|-------------:|--------:|
-| Interpolation | .NET 6.0             | .NET 6.0             | 46.40 ns | 0.504 ns | 0.690 ns | 1.09x slower |   0.02x |
-| Interpolation | .NET 7.0             | .NET 7.0             | 47.79 ns | 0.994 ns | 1.184 ns | 1.12x slower |   0.03x |
-| Interpolation | .NET 8.0             | .NET 8.0             | 42.67 ns | 0.268 ns | 0.250 ns |     baseline |         |
+| Interpolation | .NET 5.0             | .NET 5.0             |       NA |       NA |       NA |            ? |       ? |
+| Interpolation | .NET 6.0             | .NET 6.0             | 81.51 ns | 1.091 ns | 0.967 ns | 1.04x slower |   0.02x |
+| Interpolation | .NET 7.0             | .NET 7.0             | 78.64 ns | 0.695 ns | 0.616 ns | 1.01x slower |   0.01x |
+| Interpolation | .NET 8.0             | .NET 8.0             | 78.09 ns | 0.728 ns | 0.608 ns |     baseline |         |
 | Interpolation | .NET Core 3.1        | .NET Core 3.1        |       NA |       NA |       NA |            ? |       ? |
 | Interpolation | .NET Framework 4.8.1 | .NET Framework 4.8.1 |       NA |       NA |       NA |            ? |       ? |
-| Interpolation | NativeAOT 8.0        | NativeAOT 8.0        |       NA |       NA |       NA |            ? |       ? |
 
 Benchmarks with issues:
+  SparksAndFrameworksBenchmark.Interpolation: .NET 5.0(Runtime=.NET 5.0)
   SparksAndFrameworksBenchmark.Interpolation: .NET Core 3.1(Runtime=.NET Core 3.1)
   SparksAndFrameworksBenchmark.Interpolation: .NET Framework 4.8.1(Runtime=.NET Framework 4.8.1)
-  SparksAndFrameworksBenchmark.Interpolation: NativeAOT 8.0(Runtime=NativeAOT 8.0)
